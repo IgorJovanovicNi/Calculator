@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller" stylesheets="@styles.css">
+
+   <top>
+      <TextField fx:id="textField" prefHeight="65.0" prefWidth="180.0" GridPane.columnIndex="0" editable="false"
+                 GridPane.columnSpan="19" GridPane.rowIndex="0" GridPane.rowSpan="10" alignment="CENTER_RIGHT"
+       style="-fx-background-color:aqua" >
+         <font>
+            <Font size="24" />
+         </font>
+      </TextField>
+
+   </top>
+   <center>
+      <GridPane hgap="5" vgap="5" gridLinesVisible="false">
+         <padding>
+            <Insets top="5" bottom="5" left="5" right="5" />
+         </padding>
+
+         <columnConstraints>
+            <ColumnConstraints percentWidth="25.0" />
+            <ColumnConstraints percentWidth="25.0" />
+            <ColumnConstraints percentWidth="25.0" />
+            <ColumnConstraints />
+         </columnConstraints>
+
+         <Button  fx:id="oneB" text="1" prefHeight="25.0" prefWidth="80.0"  GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#digitClickedHandler"/>
+         <Button  fx:id="twoB" prefHeight= "25.0" prefWidth="80.0"  text="2" GridPane.columnIndex="1" GridPane.rowIndex="0"  onAction="#digitClickedHandler"/>
+         <Button fx:id="treeB" prefHeight="25.0" prefWidth="80.0"  text="3" GridPane.columnIndex="2" GridPane.rowIndex="0"  onAction="#digitClickedHandler"/>
+         <Button   fx:id="plus" prefHeight="25.0" prefWidth="80.0"  text="+" GridPane.columnIndex="3" GridPane.rowIndex="0"  onAction="#operatorClickHandler"/>
+
+         <Button  fx:id="fourB" prefHeight="25.0" prefWidth="80.0"  text="4" GridPane.columnIndex="0" GridPane.rowIndex="1"  onAction="#digitClickedHandler"/>
+         <Button fx:id="fiveB" prefHeight="25.0" prefWidth="80.0"  text="5" GridPane.columnIndex="1" GridPane.rowIndex="1"  onAction="#digitClickedHandler"/>
+         <Button fx:id="six" prefHeight="25.0" prefWidth="80.0"  text="6" GridPane.columnIndex="2" GridPane.rowIndex="1"  onAction="#digitClickedHandler"/>
+         <Button fx:id="minus" prefHeight="25.0" prefWidth="80.0"  text="-" GridPane.columnIndex="3" GridPane.rowIndex="1"  onAction="#operatorClickHandler"/>
+
+         <Button fx:id="seven" prefHeight="25.0" prefWidth="80.0"  text="7" GridPane.columnIndex="0" GridPane.rowIndex="2"  onAction="#digitClickedHandler" />
+         <Button fx:id="eit" prefHeight="25.0" prefWidth="80.0"  text="8" GridPane.columnIndex="1" GridPane.rowIndex="2"  onAction="#digitClickedHandler" />
+         <Button fx:id="nine" prefHeight="25.0" prefWidth="80.0"  text="9" GridPane.columnIndex="2" GridPane.rowIndex="2"  onAction="#digitClickedHandler" />
+         <Button fx:id="division" prefHeight="25.0" prefWidth="80.0"  text="/" GridPane.columnIndex="3" GridPane.rowIndex="2"  onAction="#operatorClickHandler"/>
+
+         <Button fx:id="modulo" prefHeight="25.0" prefWidth="80.0"  text="\%" GridPane.columnIndex="0" GridPane.rowIndex="3"  onAction="#operatorClickHandler"/>
+         <Button fx:id="zero" prefHeight="25.0" prefWidth="80.0"  text="0" GridPane.columnIndex="1" GridPane.rowIndex="3"  onAction="#digitClickedHandler"/>
+         <Button fx:id="multiple" prefHeight="25.0" prefWidth="80.0" text="*" GridPane.columnIndex="2" GridPane.rowIndex="3"  onAction="#operatorClickHandler"/>
+         <Button fx:id="dot" prefHeight="25.0" prefWidth="80.0" text="." GridPane.columnIndex="3" GridPane.rowIndex="3"  onAction="#digitClickedHandler"/>
+
+         <Button fx:id="equals" minWidth="-Infinity" prefHeight="27.0" prefWidth="225.0" text="=" GridPane.columnIndex="0"
+                 GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4"  onAction="#operatorClickHandler"/>
+         <Button fx:id="clear" text="C" prefWidth="80.0"  GridPane.columnIndex="3" GridPane.rowIndex="4"  onAction="#digitClickedHandler"/>
+
+
+      </GridPane>
+
+   </center>
+
+</BorderPane>
